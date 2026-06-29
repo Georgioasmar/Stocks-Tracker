@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 760" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract market chart">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1424"/>
+      <stop offset="0.55" stop-color="#0f2036"/>
+      <stop offset="1" stop-color="#0a2e2a"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#34e6c0"/>
+      <stop offset="1" stop-color="#34e6c0" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="480" height="760" fill="url(#bg)"/>
+
+  <!-- faint grid -->
+  <g stroke="#9fb3c8" stroke-opacity="0.08" stroke-width="1">
+    <line x1="0" y1="120" x2="480" y2="120"/>
+    <line x1="0" y1="240" x2="480" y2="240"/>
+    <line x1="0" y1="360" x2="480" y2="360"/>
+    <line x1="0" y1="480" x2="480" y2="480"/>
+    <line x1="0" y1="600" x2="480" y2="600"/>
+    <line x1="120" y1="0" x2="120" y2="760"/>
+    <line x1="240" y1="0" x2="240" y2="760"/>
+    <line x1="360" y1="0" x2="360" y2="760"/>
+  </g>
+
+  <!-- candlesticks -->
+  <g stroke-width="3">
+    <g stroke="#34e6c0" fill="#34e6c0">
+      <line x1="60" y1="430" x2="60" y2="520"/><rect x="52" y="455" width="16" height="50" rx="2"/>
+      <line x1="140" y1="380" x2="140" y2="470"/><rect x="132" y="400" width="16" height="55" rx="2"/>
+      <line x1="300" y1="320" x2="300" y2="410"/><rect x="292" y="345" width="16" height="50" rx="2"/>
+      <line x1="380" y1="250" x2="380" y2="350"/><rect x="372" y="275" width="16" height="58" rx="2"/>
+    </g>
+    <g stroke="#ffb454" fill="#ffb454">
+      <line x1="100" y1="470" x2="100" y2="560"/><rect x="92" y="500" width="16" height="45" rx="2"/>
+      <line x1="220" y1="360" x2="220" y2="460"/><rect x="212" y="395" width="16" height="48" rx="2"/>
+      <line x1="340" y1="300" x2="340" y2="400"/><rect x="332" y="330" width="16" height="52" rx="2"/>
+    </g>
+  </g>
+
+  <!-- trend line -->
+  <polyline points="20,560 100,500 180,520 260,430 340,360 420,300 470,250"
+            fill="none" stroke="url(#line)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#e9f2ff" font-family="monospace">
+    <text x="36" y="80" font-size="22" letter-spacing="3" opacity="0.9">ROUMIEH</text>
+    <text x="36" y="108" font-size="22" letter-spacing="3" fill="#34e6c0">QUANT</text>
+    <text x="36" y="712" font-size="13" opacity="0.6">Markets · Models · Mentorship</text>
+  </g>
+</svg>

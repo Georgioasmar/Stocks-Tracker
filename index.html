@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roumieh Quant — Markets, models & mentorship</title>
+  <meta name="description" content="A learning platform for engineering students breaking into quantitative finance: live markets, curated resources, and a CV timeline tool." />
+
+  <!-- Bootstrap 5 (required) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Fonts: display / body / data-mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- Hand-written CSS3 -->
+  <link href="css/styles.css" rel="stylesheet" />
+</head>
+
+<body data-page="home">
+
+  <!-- ===================== SHARED NAVBAR (sticky) ===================== -->
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="brand" href="index.html"><span class="brand__mark">RQ</span> Roumieh Quant</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"
+              aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" style="filter: invert(1);"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <!-- NEW PAGE ADDED TO THE TOP OF THE NAV -->
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="markets.html">Markets</a></li>
+          <li class="nav-item"><a class="nav-link" href="resources.html">Resources</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item ms-lg-2"><button class="btn-signin" data-open-auth>Sign in</button></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Markets · Models · Mentorship</p>
+      <h1>Quant finance, made <span class="accent">legible</span><br />for engineering students.</h1>
+      <p class="lead">Track live markets, learn from a curated library, and turn a dense
+        Grande&nbsp;École CV into a clean visual timeline international desks can read at a glance.</p>
+      <div class="d-flex flex-wrap gap-3 mt-4">
+        <button class="btn-primary-quant" data-open-auth>Create free account</button>
+        <a class="btn-ghost" href="markets.html">Explore markets</a>
+      </div>
+      <div class="ticker-tape">
+        <span class="tape-chip">AAPL <span class="up">▲</span></span>
+        <span class="tape-chip">NVDA <span class="up">▲</span></span>
+        <span class="tape-chip">JPM <span class="down">▼</span></span>
+        <span class="tape-chip">GS <span class="up">▲</span></span>
+        <span class="tape-chip">XOM <span class="down">▼</span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== FEATURES ===================== -->
+  <section class="section">
+    <div class="container">
+      <p class="section__eyebrow">What you get</p>
+      <h2 class="section__title">Three tools, one workflow</h2>
+      <p class="section__sub mb-4">Built around real market data and real career artifacts — no filler.</p>
+
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="feature__icon">📈</div>
+          <h3>Live markets</h3>
+          <p>Real-time quotes for 25 curated companies via the Finnhub API, with search,
+             sector and trend filters, pagination, and a detail view for each name.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">📚</div>
+          <h3>Curated library</h3>
+          <p>A hand-picked shelf of quant books, courses, firms and tools — the resources
+             that actually move you from coursework toward a desk.</p>
+        </article>
+        <article class="feature">
+          <div class="feature__icon">🗂️</div>
+          <h3>CV timeline</h3>
+          <p>Overlapping degrees, double diplomas and the année de césure laid out as
+             parallel swimlanes recruiters abroad can parse instantly.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SHARED FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container d-flex flex-wrap justify-content-between gap-3">
+      <span>© <span id="year"></span> Roumieh Quant — Full Stack project.</span>
+      <span class="mono">Lebanese University · Faculty of Engineering · Branch 2</span>
+    </div>
+  </footer>
+
+  <!-- ===================== LOGIN CTA MODAL (40% image / 60% form) ===================== -->
+  <div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true" aria-labelledby="authTitle">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="auth-grid">
+          <!-- 40% vertical image -->
+          <div class="auth-grid__image" role="img" aria-label="Roumieh Quant"></div>
+          <!-- 60% form -->
+          <div class="auth-grid__form">
+            <button type="button" class="btn-close ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+            <h2 id="authTitle">Welcome back</h2>
+            <p class="sub">Sign in to track markets and save your CV timeline.</p>
+
+            <form id="authForm" novalidate>
+              <div class="auth-field">
+                <label for="authEmail">Email</label>
+                <input type="email" id="authEmail" class="form-control" placeholder="you@example.com" autocomplete="email" />
+                <span class="invalid-feedback-msg" id="emailError"></span>
+              </div>
+              <div class="auth-field">
+                <label for="authPassword">Password</label>
+                <input type="password" id="authPassword" class="form-control" placeholder="At least 8 characters" autocomplete="current-password" />
+                <span class="invalid-feedback-msg" id="passError"></span>
+              </div>
+              <button type="submit" class="auth-submit">Sign in</button>
+            </form>
+
+            <div class="auth-sep">or continue with</div>
+            <div class="social-row">
+              <button class="social-btn" data-provider="Google">G · Google</button>
+              <button class="social-btn" data-provider="LinkedIn">in · LinkedIn</button>
+              <button class="social-btn" data-provider="GitHub">⌥ · GitHub</button>
+            </div>
+
+            <div class="auth-feedback" id="authFeedback"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/api-service.js"></script>
+  <script src="js/auth-modal.js"></script>
+  <script src="js/markets.js"></script>
+  <script src="js/resources.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
