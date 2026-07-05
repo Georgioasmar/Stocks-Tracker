@@ -43,10 +43,11 @@ and vanilla JavaScript written **entirely with ES6 classes** — `App`, `ApiServ
 
 **Implemented requirement:** _"Create a hero section with overlay text and call-to-action"_
 
-Where: clicking any stock card on the **Markets** page opens `#detailModal`, which
-is populated live from Finnhub's company-profile endpoint. The implementing code is
-marked with a `CUSTOM UI REQUIREMENT` comment block in `js/markets.js`
-(`MarketsPage._openDetail()`).
+--> On the hero landing page a call-to-action login overlay is shown
+
+Aditionally clicking any stock card on the **Markets** page opens `#detailModal`, which
+is populated live from Finnhub's company-profile endpoint. 
+
 (`.spinner`, shown during API calls), **real-time form validation** (the sign-in
 modal), and a **responsive card grid with hover effects** (Markets & Resources).
 
@@ -66,10 +67,6 @@ Tablet View:
 
 ![Tablet View](images\ipad_view.png)
 
-- `evidence/mobile.png`
-- `evidence/tablet.png`
-- `evidence/desktop.png`
-
 ---
 
 ## AI-use appendix
@@ -82,10 +79,12 @@ Tablet View:
 
 **Sample prompts**
 
-1. _"Convert this React/Tailwind landing page into semantic HTML5 + Bootstrap 5
-   with hand-written CSS3, no frameworks."_
+1. _"Convert this React landing page into semantic HTML5 + Bootstrap 5
+   with hand-written CSS3, no frameworks."_ 
 2. _"Write an ES6 class that fetches quotes for a list of tickers from Finnhub and
    handles 401/429/network errors."_
+
+PS: The project was previously a react side project, used AI to convert it to fit the HTML & ES6 criteria 
 
 **What the AI got wrong**
 
@@ -93,7 +92,7 @@ Tablet View:
    hitting Finnhub's rate limit. I changed search to filter the already-loaded
    data client-side instead — found it when the cards flickered and 429 errors
    appeared in the console."_
-2. _"Initial CSS made the 40/60 login split with floats, which collapsed on
+2. _"Initial CSS made the 40/60 login overaly split with floats, which collapsed on
    mobile. I rebuilt it with Flexbox and a media query that turns the image panel
    into a top banner under 768px."_
 
@@ -101,5 +100,6 @@ Tablet View:
 
 ## Deployment
 https://georgioasmar.github.io/Stocks-Tracker
-Free deployment using Github Pages
+
+through free deployment using Github Pages
 
