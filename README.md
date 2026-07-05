@@ -4,8 +4,9 @@ A front-end web app for engineering students breaking into quantitative finance:
 live markets, a curated resource shelf, and a CV-timeline tool that turns a dense
 French Grande École CV into a layout international recruiters can read.
 
-> **Author:** _<Georgio El Asmar>_
-> **Live URL:** _<paste your Vercel / Netlify / GitHub Pages link>_
+> **Author:** _Georgio El Asmar_
+
+> **Live URL:** _[Github Pages Live Website](https://georgioasmar.github.io/Stocks-Tracker)_
 
 ---
 
@@ -23,7 +24,6 @@ The Markets page demonstrates all three  API features at once:
 
 | Page | File | What it does |
 |------|------|--------------|
-| CV Timeline | `timeline.html` | Dual-column visual timeline (the headline feature) |
 | Home | `index.html` | Hero + features + the sign-in call-to-action modal |
 | Markets | `markets.html` | Live API data with search / filter / pagination + detail modal |
 | Resources | `resources.html` | 16 curated quant resources with category filtering |
@@ -54,7 +54,17 @@ modal), and a **responsive card grid with hover effects** (Markets & Resources).
 
 ## Responsive evidence
 
-Add screenshots at three widths here (required):
+Desktop view:
+
+![Desktop View](images\desktop_view.png)
+
+Mobile view:
+
+![Mobile View](images\mobile_view.png)
+
+Tablet View:
+
+![Tablet View](images\ipad_view.png)
 
 - `evidence/mobile.png`
 - `evidence/tablet.png`
@@ -68,7 +78,7 @@ Add screenshots at three widths here (required):
 
 - _Claude / Gemini_ — used to: scaffold the ES6 class structure, draft the
   Finnhub fetch wrapper, and rebuild the React/Tailwind mockup as vanilla
-  HTML/CSS/Bootstrap. _(Edit to match what you actually did.)_
+  HTML/CSS/Bootstrap as per the .
 
 **Sample prompts**
 
@@ -90,5 +100,6 @@ Add screenshots at three widths here (required):
 ---
 
 ## Deployment
-
+https://georgioasmar.github.io/Stocks-Tracker
+Free deployment using Github Pages
 
